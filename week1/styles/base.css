@@ -16,18 +16,19 @@ header {
 header img {
     border-radius: 50%;
     margin-bottom: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 10);
 }
 
 header h1 {
     font-size: 2.2rem;
     margin: 0.5rem 0;
+    color: #fff;
 }
 
 header span {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ccc;
     gap: 1rem;
 }
 
