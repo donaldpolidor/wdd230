@@ -1,0 +1,32 @@
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    /* Navigation: horizontal layout */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    /* Main content: Grid layout */
+    main {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .card:first-of-type {
+        grid-column: span 2;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+    }
+}
