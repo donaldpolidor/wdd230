@@ -20,21 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ensure menu is hidden on resize to large screens
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 768) {
-            mainNav.classList.remove('hidden'); // Show nav for larger screens
-            hamburgerMenu.style.display = 'none'; // Hide hamburger button
+            mainNav.classList.remove('hidden'); 
+            hamburgerMenu.style.display = 'none'; 
         } else {
-            mainNav.classList.add('hidden'); // Hide nav for smaller screens
-            hamburgerMenu.style.display = 'block'; // Show hamburger button
+            mainNav.classList.add('hidden'); 
+            hamburgerMenu.style.display = 'block'; 
         }
     });
 
     // Initial check on page load
     if (window.innerWidth < 768) {
-        mainNav.classList.add('hidden'); // Ensure nav is hidden on smaller screens
-        hamburgerMenu.style.display = 'block'; // Show hamburger button
+        mainNav.classList.add('hidden'); 
+        hamburgerMenu.style.display = 'block'; 
     } else {
-        mainNav.classList.remove('hidden'); // Show nav on larger screens
-        hamburgerMenu.style.display = 'none'; // Hide hamburger button
+        mainNav.classList.remove('hidden'); 
+        hamburgerMenu.style.display = 'none'; 
     }
 
     // Dark mode toggle with persistence

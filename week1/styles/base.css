@@ -157,31 +157,31 @@ footer p {
 
 /* Styles for dark mode */
 body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #fff; /* Light text */
-    filter: grayscale(100%); /* Convert everything to grayscale */
+    background-color: #121212; 
+    color: #fff; 
+    filter: grayscale(100%); 
 }
 
 header.dark-mode {
-    background-color: #333; /* Dark header background */
+    background-color: #333; 
 }
 
 nav.dark-mode ul {
-    background-color: #444; /* Dark menu background */
+    background-color: #444; 
 }
 
 nav.dark-mode ul li a {
-    color: #fff; /* Light text for links */
+    color: #fff; 
 }
 
 .card.dark-mode {
-    background-color: #333; /* Dark card background */
-    color: #fff; /* Light text */
+    background-color: #333; 
+    color: #fff; 
 }
 
 
 footer.dark-mode {
-    background-color: #222; /* Dark footer background */
-    color: #fff; /* Light text */
+    background-color: #222; 
+    color: #fff; 
 }
 

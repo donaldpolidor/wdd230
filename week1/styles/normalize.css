@@ -9,14 +9,14 @@
 
 /* Normaliser les balises HTML de base */
 html {
-    font-size: 100%; /* Base de taille de police */
+    font-size: 100%; 
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
-    background-color: #fff; /* Couleur de fond par défaut */
-    color: #333; /* Couleur de texte par défaut */
+    background-color: #fff; 
+    color: #333; 
 }
 
 /* Normalisation des balises de titre */
@@ -33,7 +33,7 @@ ul {
 /* Style de lien de base */
 a {
     text-decoration: none;
-    color: inherit; /* Hérite la couleur de l'élément parent */
+    color: inherit; 
 }
 
 a:focus,
