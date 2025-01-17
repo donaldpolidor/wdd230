@@ -23,3 +23,29 @@
         font-size: 0.9rem;
     }
 }
+
+
+/* Cacher le menu hamburger par défaut */
+#hamburgerMenu {
+    display: none;
+}
+
+/* Afficher le menu hamburger uniquement sur les écrans mobiles */
+@media (max-width: 767px) {
+    #hamburgerMenu {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Cacher la navigation par défaut */
+        flex-direction: column;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    nav ul:not(.hidden) {
+        display: flex;
+    }
+}

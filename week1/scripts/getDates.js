@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerMenu.textContent = mainNav.classList.contains('hidden') ? '☰' : '✖';
     });
 
-    // Ensure menu is visible on large screens
+    // Ensure menu is hidden on resize to large screens
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 768) {
-            mainNav.classList.remove('hidden');
+            mainNav.classList.remove('hidden'); // Show nav for larger screens
+            hamburgerMenu.style.display = 'none'; // Hide hamburger button
+        } else {
+            hamburgerMenu.style.display = 'block'; // Show hamburger button
         }
     });
 
