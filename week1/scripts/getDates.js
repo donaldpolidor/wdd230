@@ -9,10 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
 
     // Hamburger menu toggle
-    hamburgerMenu.addEventListener('click', () => {
-        mainNav.classList.toggle('hidden');
-        hamburgerMenu.textContent = mainNav.classList.contains('hidden') ? '☰' : '✖';
-    });
+    const toggleMenu = () => {
+        const isHidden = mainNav.classList.contains('hidden');
+        mainNav.classList.toggle('hidden', !isHidden);
+        hamburgerMenu.textContent = isHidden ? '✖' : '☰';
+    };
+
+    hamburgerMenu.addEventListener('click', toggleMenu);
 
     // Ensure menu is hidden on resize to large screens
     window.addEventListener('resize', () => {
@@ -20,9 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNav.classList.remove('hidden'); // Show nav for larger screens
             hamburgerMenu.style.display = 'none'; // Hide hamburger button
         } else {
+            mainNav.classList.add('hidden'); // Hide nav for smaller screens
             hamburgerMenu.style.display = 'block'; // Show hamburger button
         }
     });
+
+    // Initial check on page load
+    if (window.innerWidth < 768) {
+        mainNav.classList.add('hidden'); // Ensure nav is hidden on smaller screens
+        hamburgerMenu.style.display = 'block'; // Show hamburger button
+    } else {
+        mainNav.classList.remove('hidden'); // Show nav on larger screens
+        hamburgerMenu.style.display = 'none'; // Hide hamburger button
+    }
 
     // Dark mode toggle with persistence
     const applyDarkMode = (isDark) => {
