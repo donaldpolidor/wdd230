@@ -47,5 +47,6 @@
 
     nav ul:not(.hidden) {
         display: flex;
+        row-gap: 0.1px;
     }
 }

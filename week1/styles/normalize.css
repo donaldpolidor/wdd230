@@ -1,0 +1,79 @@
+/* Normalisation de la mise en page */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Normaliser les balises HTML de base */
+html {
+    font-size: 100%; /* Base de taille de police */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: #fff; /* Couleur de fond par défaut */
+    color: #333; /* Couleur de texte par défaut */
+}
+
+/* Normalisation des balises de titre */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Liste non ordonnée */
+ul {
+    list-style: none;
+}
+
+/* Style de lien de base */
+a {
+    text-decoration: none;
+    color: inherit; /* Hérite la couleur de l'élément parent */
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+/* Réinitialisation des marges pour les éléments de formulaire */
+input, button, select, textarea {
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+}
+
+/* Normalisation des éléments de bloc */
+main {
+    display: block;
+    width: 100%;
+}
+
+/* Réinitialisation de la police pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Spécial pour les sections contenant du texte */
+section {
+    display: block;
+}
+
+/* Réinitialisation du comportement des boutons */
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Empêche le défilement horizontal */
+html, body {
+    overflow-x: hidden;
+}
