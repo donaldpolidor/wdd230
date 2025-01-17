@@ -1,6 +1,5 @@
 /* Media query for larger screens */
 @media (min-width: 768px) {
-    /* Navigation: horizontal layout */
     nav ul {
         flex-direction: row;
         justify-content: center;
@@ -10,7 +9,6 @@
         margin: 0 1rem;
     }
 
-    /* Main content: Grid layout */
     main {
         display: flex;
         flex-direction: row;
@@ -21,72 +19,7 @@
         margin: 0;
     }
 
-    .card:first-of-type {
-        grid-column: span 2;
-    }
-
-    /* Footer */
     footer {
         font-size: 0.9rem;
     }
 }
-
-/* Hamburger Menu */
-#hamburgerMenu {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-}
-
-#mainNav {
-    transition: all 0.3s ease;
-}
-
-#mainNav.hidden {
-    display: none;
-}
-
-/* Mode sombre */
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode header {
-    background-color: #333;
-}
-
-body.dark-mode nav ul {
-    background-color: #444;
-}
-
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #f9f9f9;
-}
-
-body.dark-mode footer {
-    background-color: #222;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    #hamburgerMenu {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #mainNav {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-

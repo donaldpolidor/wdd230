@@ -4,29 +4,64 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s, filter 0.3s;
 }
-
-body.dark-mode .title-card {
-    color: #fff;
-    border-bottom-color: #555;
-}
-
 
 header {
     background-color: #c08300;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    transition: background-color 0.3s;
+}
 
-    header div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#header-buttons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#darkModeToggle {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.2);
+    color: #f0f0f0;
+}
+
+#hamburgerMenu {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#hamburgerMenu:hover {
+    transform: scale(1.2);
+    color: #f0f0f0;
+}
 
 header img {
     border-radius: 50%;
@@ -41,17 +76,6 @@ header h1 {
     color: #fff;
 }
 
-header span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
 /* Navigation */
 nav ul {
     gap: 5rem;
@@ -62,6 +86,7 @@ nav ul {
     flex-direction: column;
     text-align: center;
     background-color: #a30000;
+    transition: background-color 0.3s;
 }
 
 nav ul li {
@@ -87,50 +112,29 @@ main {
     max-width: 800px;
 }
 
-
 .card {
     background-color: #f9f9f9;
     padding: 1rem;
     margin: 1rem 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.30); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.30);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#mainNav.hidden {
-    display: none;
-}
-
-#mainNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-}
-
-#darkModeToggle{
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff;
-    background-color: none;
-    transition: transform 0.3 ease;
-}
-
-#darkModeToggle:hover{
-    transform: scale(1.2);
-}
-
-.card h2{
+.card h2 {
     margin-top: auto;
     background-color: #a30000;
     max-width: 100%;
     color: #fff;
+    text-align: center;
 }
 
-.title-card{
+.title-card {
     color: #333;
     margin-top: 2px;
     border-bottom: 1px solid black;
+    text-align: center;
 }
 
 /* Footer */
@@ -139,8 +143,41 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: #fff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 footer p {
     margin: 0.5rem 0;
 }
+
+/* Styles for dark mode */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text */
+    filter: grayscale(100%); /* Convert everything to grayscale */
+}
+
+header.dark-mode {
+    background-color: #333; /* Dark header background */
+}
+
+nav.dark-mode ul {
+    background-color: #444; /* Dark menu background */
+}
+
+nav.dark-mode ul li a {
+    color: #fff; /* Light text for links */
+}
+
+.card.dark-mode {
+    background-color: #333; /* Dark card background */
+    color: #fff; /* Light text */
+}
+
+
+footer.dark-mode {
+    background-color: #222; /* Dark footer background */
+    color: #fff; /* Light text */
+}
+
+
