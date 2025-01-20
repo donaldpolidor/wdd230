@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 33%;
+        left: 0;
+        width: 100%;
+        background-color: #a50000b6;
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+        opacity: 1;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
