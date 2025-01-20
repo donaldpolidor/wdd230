@@ -25,12 +25,10 @@
 }
 
 
-/* Cacher le menu hamburger par défaut */
 #hamburgerMenu {
     display: none;
 }
 
-/* Afficher le menu hamburger uniquement sur les écrans mobiles */
 @media (max-width: 767px) {
     #hamburgerMenu {
         display: block;
