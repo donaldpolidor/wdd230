@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Dynamically set year and last modified date
+    // Dynamically set year and last modified date/time
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
+
+    // Extract and format the last modified time
+    const lastModifiedTime = new Date(document.lastModified).toLocaleString();
+    document.getElementById("lastModifiedTime").textContent = "Last Modified Time: " + lastModifiedTime;
 
     // Variables
     const hamburgerMenu = document.getElementById('hamburgerMenu');
