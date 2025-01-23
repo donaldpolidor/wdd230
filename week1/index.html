@@ -32,8 +32,19 @@
         </ul>
     </nav>
 
+    <section class="hero">
+        <picture>
+            <source media="(max-width: 767px)" srcset="images/temple2.webp">
+            <source media="(min-width: 768px)" srcset="images/temple1.webp">
+            <img src="images/temple2.webp" alt="Temple Moderne" />
+        </picture>
+        <div class="overlay">
+            <h2>Temple of the Republic of Haiti</h2>
+        </div>
+    </section>
     <section class="title-card"><h2>WDD 230: Web Frontend Development</h2></section>
     <main>
+
         <section class="card">
             <h2>Learning Activities</h2>
             <ul>
@@ -50,6 +61,10 @@
             <p>Weather updates and page visit information will be displayed here later.</p>
         </section>
     </main>
+
+    <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" loading="lazy"></iframe>
+    </section>
 
     <footer>
         <p>&copy; <span id="year"></span> 💻Donald Polidor💻 Haiti</p>

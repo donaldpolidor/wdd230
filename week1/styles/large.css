@@ -48,3 +48,17 @@
         row-gap: 0.1px;
     }
 }
+
+/* Media queries */
+@media (min-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 600px;
+    }
+}
