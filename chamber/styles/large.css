@@ -52,3 +52,14 @@
         margin-top: 0.1rem;
     }
 }
+
+/* CSS spécifique pour la mise en page Discovery */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img:hover {
+        transform: none;
+    }
+}
