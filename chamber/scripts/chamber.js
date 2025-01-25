@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const daysDiff = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
 
             if (daysDiff < 1) {
-                welcomeMessage.textContent = "De retour si tôt ! ​​Génial !";
+                welcomeMessage.textContent = "Back so soon! Awesome!";
             } else if (daysDiff === 1) {
-                welcomeMessage.textContent = "Votre dernière visite remonte à 1 jour.";
+                welcomeMessage.textContent = "Your last visit was 1 day ago.";
             } else {
-                welcomeMessage.textContent = `Votre dernière visite remonte à ${daysDiff} jours.`;
+                welcomeMessage.textContent = `Your last visit was ${daysDiff} day.`;
             }
         } else {
-            welcomeMessage.textContent = "Bienvenue ! N'hésitez pas à nous contacter si vous avez des questions.";
+            welcomeMessage.textContent = "Welcome to our website! Please don't hesitate to contact us if you have any questions.";
         }
 
         localStorage.setItem("lastVisit", now);
