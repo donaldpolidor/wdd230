@@ -1,51 +1,65 @@
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
+        position: relative;
     }
 
     .hamburger {
         display: flex;
         align-self: flex-end;
-        margin: 1rem 0;
+        margin-top: 0.5rem;
     }
 
     nav ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 43%;
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(165, 0, 0, 0.95);
+        background-color: #a50000b6;
         z-index: 1000;
-        padding: 0.5rem 0;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
+        padding: 1rem 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(-10px);
         opacity: 0;
     }
 
     nav ul.show {
         display: flex;
-        max-height: 500px;
+        transform: translateY(0);
         opacity: 1;
     }
 
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main img {
+        margin-top: 0.1rem;
+    }
+}
+
+/* CSS spécifique pour la mise en page Discovery */
+@media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery img {
-        margin-bottom: 1rem;
-    }
-
-    footer {
-        text-align: center;
-        padding: 1rem 0.5rem;
+    .gallery img:hover {
+        transform: none;
     }
 }
