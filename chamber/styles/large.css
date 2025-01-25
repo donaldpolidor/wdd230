@@ -64,3 +64,7 @@
         transform: none;
     }
 }
+
+.sidebar, .gallery {
+    margin: 0 auto; /* Centrer le contenu */
+}
