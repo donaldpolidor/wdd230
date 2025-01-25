@@ -184,6 +184,17 @@ footer a {
             gap: 1rem;
         }
 
+        .gallery div {
+            text-align: center;
+        }
+        
+        .gallery h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+
         .gallery img {
             width: 100%;
             border-radius: 5px;
