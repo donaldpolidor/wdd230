@@ -63,3 +63,78 @@
         transform: none;
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 0.5rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(165, 0, 0, 0.9);
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+        padding: 0.5rem; /* Réduire le padding sur mobile */
+    }
+
+    .sidebar {
+        padding: 0.5rem; /* Réduire le padding de la sidebar */
+    }
+
+    .sidebar h3 {
+        font-size: 1.5rem; /* Réduire la taille du texte des titres */
+    }
+
+    .sidebar p {
+        font-size: 0.9rem; /* Réduire la taille du texte des paragraphes */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+
+    .gallery img {
+        width: 100%; /* S'assurer que les images s'adaptent bien */
+    }
+}
