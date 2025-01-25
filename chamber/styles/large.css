@@ -17,18 +17,17 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(165, 0, 0, 0.9);
+        background-color: #a50000b6;
         z-index: 1000;
         padding: 1rem 0;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(-10px);
         opacity: 0;
     }
 
     nav ul.show {
         display: flex;
-        max-height: 500px;
+        transform: translateY(0);
         opacity: 1;
     }
 
@@ -54,7 +53,7 @@
     }
 }
 
-/* Specific CSS for Discovery layout */
+/* CSS spécifique pour la mise en page Discovery */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;

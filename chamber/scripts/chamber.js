@@ -3,20 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector("nav ul");
     const heroImage = document.querySelector("main img");
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector("nav ul");
-    
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("show");
-        });
-    
-        // Dynamically update the year and last modified date
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent =
-            "Last Updated: " + document.lastModified;
-    });
-   
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("show");
 
@@ -33,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* Specific CSS for Discovery layout */
-    // Display welcome message based on last visit
+/* CSS spécifique pour la mise en page Discovery */
+    // Affichage du message de bienvenue basé sur la dernière visite
     document.addEventListener("DOMContentLoaded", () => {
         const welcomeMessage = document.getElementById("welcome-message");
         const lastVisit = localStorage.getItem("lastVisit");
@@ -45,19 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const daysDiff = Math.floor((now - lastVisitDate) / (1000 * 60 * 60 * 24));
 
             if (daysDiff < 1) {
-                welcomeMessage.textContent = "Back so soon! Awesome!";
+                welcomeMessage.textContent = "De retour si tôt ! ​​Génial !";
             } else if (daysDiff === 1) {
-                welcomeMessage.textContent = "Your last visit was 1 day ago.";
+                welcomeMessage.textContent = "Votre dernière visite remonte à 1 jour.";
             } else {
-                welcomeMessage.textContent = `Your last visit was ${daysDiff} days.`;
+                welcomeMessage.textContent = `Votre dernière visite remonte à ${daysDiff} jours.`;
             }
         } else {
-            welcomeMessage.textContent = "Welcome to our website! Please don't hesitate to contact us if you have any questions.";
+            welcomeMessage.textContent = "Bienvenue ! N'hésitez pas à nous contacter si vous avez des questions.";
         }
 
         localStorage.setItem("lastVisit", now);
     });
 
-    // Update year and last modification
+    // Mise à jour de l'année et de la dernière modification
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
