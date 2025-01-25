@@ -17,17 +17,18 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #a50000b6;
+        background-color: rgba(165, 0, 0, 0.9);
         z-index: 1000;
         padding: 1rem 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        transform: translateY(-10px);
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
         opacity: 0;
     }
 
     nav ul.show {
         display: flex;
-        transform: translateY(0);
+        max-height: 500px;
         opacity: 1;
     }
 
@@ -53,11 +54,13 @@
     }
 }
 
-/* CSS spécifique pour la mise en page Discovery */
+/* Specific CSS for Discovery layout */
 @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 
     .gallery img:hover {
         transform: none;
     }
 }
-
