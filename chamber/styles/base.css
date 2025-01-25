@@ -158,7 +158,7 @@ footer a {
     text-align: center;
 }  
 
-        /* CSS spécifique pour la mise en page Discovery */
+        /* Specific CSS for Discovery layout */
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 3fr;
