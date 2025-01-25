@@ -159,11 +159,6 @@ footer a {
 }  
 
         /* CSS spécifique pour la mise en page Discovery */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
-        }
 
         .sidebar, .gallery {
             padding: 1rem;
