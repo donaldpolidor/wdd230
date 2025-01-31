@@ -25,6 +25,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+
 </head>
 <body>
 
@@ -48,53 +50,53 @@
 </header>
 
 <main>
-    <img src="images/hero.jpg" alt="Commerce overview" style="width: 100%;">
-    <section id="about">
-        <h2>About the Community</h2>
-        <p>Our community is a place where people gather, share, and grow together.</p>
-    </section>
+    <section class="membership-container">
+        <div class="membership-form">
+            <h2>Membership Application</h2>
+            <form action="thankyou.html" method="get">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+                
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+                
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\-\s]{7,}" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="company">Company/Organization Name:</label>
+                <input type="text" id="company" name="company" required>
+                
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership">
+                    <option value="np">Non-Profit (Free)</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+                
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description"></textarea>
+                
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
 
-    <section id="news">
-        <h2>Latest News</h2>
-        <article>
-            <h3>New Partnership Announced</h3>
-            <p>Our Chamber of Commerce has partnered with local businesses to boost the community's economic growth. Stay tuned for exciting developments!</p>
-            <a href="#">Read more</a>
-        </article>
-        <article>
-            <h3>Upcoming Networking Event</h3>
-            <p>Join us for a networking event aimed at connecting entrepreneurs with local leaders. Mark your calendars for February 15th.</p>
-            <a href="#">Read more</a>
-        </article>
-        <article>
-            <h3>Business Spotlight</h3>
-            <p>This month's business spotlight features a local company providing innovative solutions in technology and logistics.</p>
-            <a href="#">Read more</a>
-        </article>
-    </section>
-
-    <section id="weather">
-        <h2>Weather</h2>
-        <p>Current temperature: 25°C, sunny.</p>
-        <p><a href="#">See the forecast</a></p>
-    </section>
-
-    <section id="cta">
-        <h2>Calls to Action</h2>
-        <a href="#" class="cta-button">Join the community</a>
-        <a href="#" class="cta-button">Participate in events</a>
-        <a href="#" class="cta-button">Download resources</a>
-    </section>
-
-    <section id="business">
-        <h2>Business Spotlights</h2>
-        <img src="images/acess.png" alt="Business Acess" width="60">
-        <img src="images/barbancourt.png" alt="Barbancourt" width="60">
-        <img src="images/brana.png" alt="Brana" width="60">
-        <img src="images/delimart.png" alt="Delimart" width="60">
-        <img src="images/pharmacy.png" alt="Pharmacy" width="60">
-        <img src="images/paryajlakay.png" alt="Paryaj Lakay" width="60">
-        <p>Highlight local businesses that make our community shine.</p>
+        <div class="membership-benefits">
+            <h3>Membership Benefits</h3>
+            <ul>
+                <li><strong>Bronze:</strong> Event access, networking opportunities</li>
+                <li><strong>Silver:</strong> Discounts, featured directory listing</li>
+                <li><strong>Gold:</strong> Premium advertising, VIP event access</li>
+            </ul>
+        </div>
     </section>
 </main>
 

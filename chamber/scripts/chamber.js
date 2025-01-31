@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* CSS spécifique pour la mise en page Discovery */
-    // Affichage du message de bienvenue basé sur la dernière visite
+// Display welcome message based on last visit
     document.addEventListener("DOMContentLoaded", () => {
         const welcomeMessage = document.getElementById("welcome-message");
         const lastVisit = localStorage.getItem("lastVisit");
@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("lastVisit", now);
     });
 
-    // Mise à jour de l'année et de la dernière modification
+    // Update year and last modification
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("timestamp").value = new Date().toISOString();
