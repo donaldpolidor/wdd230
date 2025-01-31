@@ -1,57 +1,75 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Dynamically set year and last modified date
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
 
-    // Variables
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const mainNav = document.getElementById('mainNav');
-    const darkModeToggle = document.getElementById('darkModeToggle');
+// Dynamically set year and last modified date
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
 
-    // Hamburger menu toggle
-    const toggleMenu = () => {
-        const isHidden = mainNav.classList.contains('hidden');
-        mainNav.classList.toggle('hidden', !isHidden);
-        hamburgerMenu.textContent = isHidden ? '✖' : '☰';
-    };
+// Variables
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const mainNav = document.getElementById('mainNav');
+const darkModeToggle = document.getElementById('darkModeToggle');
 
-    hamburgerMenu.addEventListener('click', toggleMenu);
+// Hamburger menu toggle
+const toggleMenu = () => {
+    const isHidden = mainNav.classList.contains('hidden');
+    mainNav.classList.toggle('hidden', !isHidden);
+    hamburgerMenu.textContent = isHidden ? '✖' : '☰';
+};
 
-    // Ensure menu is hidden on resize to large screens
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768) {
-            mainNav.classList.remove('hidden'); 
-            hamburgerMenu.style.display = 'none'; 
-        } else {
-            mainNav.classList.add('hidden'); 
-            hamburgerMenu.style.display = 'block'; 
-        }
-    });
+hamburgerMenu.addEventListener('click', toggleMenu);
 
-    // Initial check on page load
-    if (window.innerWidth < 768) {
-        mainNav.classList.add('hidden'); 
-        hamburgerMenu.style.display = 'block'; 
+// Ensure menu is hidden on resize to large screens
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+        mainNav.classList.remove('hidden');
+        hamburgerMenu.style.display = 'none';
     } else {
-        mainNav.classList.remove('hidden'); 
-        hamburgerMenu.style.display = 'none'; 
+        mainNav.classList.add('hidden');
+        hamburgerMenu.style.display = 'block';
     }
-
-    // Dark mode toggle with persistence
-    const applyDarkMode = (isDark) => {
-        const elements = [document.body, document.querySelector('header'), document.querySelector('nav'), document.querySelector('footer')];
-        elements.forEach(el => el.classList.toggle('dark-mode', isDark));
-        document.querySelectorAll('.card').forEach(card => card.classList.toggle('dark-mode', isDark));
-        darkModeToggle.textContent = isDark ? '☀️' : '🌙';
-        darkModeToggle.setAttribute('aria-pressed', isDark);
-    };
-
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    applyDarkMode(isDarkMode);
-
-    darkModeToggle.addEventListener('click', () => {
-        const isDark = !document.body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDark);
-        applyDarkMode(isDark);
-    });
 });
+
+// Initial check on page load
+if (window.innerWidth < 768) {
+    mainNav.classList.add('hidden');
+    hamburgerMenu.style.display = 'block';
+} else {
+    mainNav.classList.remove('hidden');
+    hamburgerMenu.style.display = 'none';
+}
+
+// Dark mode toggle with persistence
+const applyDarkMode = (isDark) => {
+    const elements = [document.body, document.querySelector('header'), document.querySelector('nav'), document.querySelector('footer')];
+    elements.forEach(el => el.classList.toggle('dark-mode', isDark));
+    document.querySelectorAll('.card').forEach(card => card.classList.toggle('dark-mode', isDark));
+    darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+    darkModeToggle.setAttribute('aria-pressed', isDark);
+};
+
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+applyDarkMode(isDarkMode);
+
+darkModeToggle.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDark);
+    applyDarkMode(isDark);
+});
+
+// Rating value update
+document.getElementById('rating').addEventListener('input', (event) => {
+    document.getElementById('ratingValue').textContent = event.target.value;
+});
+
+
+ // Retrieve form data sent via GET
+ const urlParams = new URLSearchParams(window.location.search);
+
+ const username = urlParams.get('username');
+ const email = urlParams.get('email');
+ const rating = urlParams.get('rating');
+
+ // Display data in the corresponding HTML elements
+ document.getElementById('usernameDisplay').textContent = username ? username : 'No username provided';
+ document.getElementById('emailDisplay').textContent = email ? email : 'No email provided';
+ document.getElementById('ratingDisplay').textContent = rating ? rating : 'No rating provided';
+ 

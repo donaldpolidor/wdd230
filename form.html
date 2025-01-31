@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donald Polidor - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="Donald Polidor - Web Frontend Development - course assignment form">
+    <meta name="author" content="Donald Polidor">
+    <link rel="stylesheet" href="week1/styles/normalize.css">
+    <link rel="stylesheet" href="week1/styles/base.css">
+    <link rel="stylesheet" href="week1/styles/form.css">
+    <link rel="stylesheet" href="week1/styles/large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="week1/images/dodo.jpeg" alt="Profil of Donald Polidor" width="150">
+            <h1>Donald Polidor</h1>
+            <button id="darkModeToggle" aria-label="Basculer le mode sombre">🌙</button>
+        </div>
+        <button id="hamburgerMenu" aria-label="Basculer le menu">☰</button>
+    </header>
+    <nav id="mainNav" class="hidden">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content area with the form -->
+    <h2>Registration form</h2>
+    <main>
+        
+        <form action="record.html" method="get">
+            <label for="username">Nom d'utilisateur (obligatoire) :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe (obligatoire, min. 8 caractères, alphanumérique) :</label>
+            <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}">
+
+            <label for="confirmPassword">Confirmer le mot de passe :</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="email">E-mail (doit être de type @byui.edu) :</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$">
+
+            <label for="rating">Évaluation (1 à 10) :</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1">
+            <span id="ratingValue">5</span>
+
+            <button type="submit">Soumettre</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 💻Donald Polidor💻 Haiti</p>
+        <p id="lastModified"></p>
+        <p id="lastModifiedTime"></p>
+    </footer>
+
+    <script src="week1/scripts/getDates.js"></script>
+  
+</body>
+
+</html>

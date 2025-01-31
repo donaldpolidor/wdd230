@@ -1,0 +1,122 @@
+/* Variables CSS */
+:root {
+    --primary-color: #a30000;
+    --background-color: #f9f9f9;
+    --input-border-color: #ddd;
+    --input-focus-border-color: #a30000;
+    --error-color: #ff0000;
+    --label-font-size: 1rem;
+}
+
+/* Form Styles */
+form {
+    background-color: var(--background-color);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Label Styles */
+label {
+    display: block;
+    font-size: var(--label-font-size);
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="range"]:focus {
+    border-color: var(--input-focus-border-color);
+    outline: none;
+}
+
+/* Range input Styles */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Submit Button Styles */
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #8a0000;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode form {
+    background-color: #333;
+}
+
+body.dark-mode label,
+body.dark-mode input,
+body.dark-mode button {
+    color: #fff;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="range"] {
+    background-color: #444;
+    border: 1px solid #666;
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="password"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="range"]:focus {
+    border-color: #a30000;
+}
+
+body.dark-mode .error-message {
+    color: #ff6666;
+}
