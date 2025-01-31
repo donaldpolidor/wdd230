@@ -60,16 +60,4 @@ document.getElementById('rating').addEventListener('input', (event) => {
     document.getElementById('ratingValue').textContent = event.target.value;
 });
 
-
- // Retrieve form data sent via GET
- const urlParams = new URLSearchParams(window.location.search);
-
- const username = urlParams.get('username');
- const email = urlParams.get('email');
- const rating = urlParams.get('rating');
-
- // Display data in the corresponding HTML elements
- document.getElementById('usernameDisplay').textContent = username ? username : 'No username provided';
- document.getElementById('emailDisplay').textContent = email ? email : 'No email provided';
- document.getElementById('ratingDisplay').textContent = rating ? rating : 'No rating provided';
  

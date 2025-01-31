@@ -22,11 +22,13 @@
             <h1>Submission Confirmation</h1>
         </div>
     </header>
-    
 
     <main>
         <h2>Thank you for registering!</h2>
         <p>Your form has been successfully submitted.</p>
+
+        <h3>Submitted Information:</h3>
+
         <p><strong>Username:</strong> <span id="usernameDisplay"></span></p>
         <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
         <p><strong>Rating:</strong> <span id="ratingDisplay"></span></p>
@@ -39,23 +41,23 @@
         <p id="lastModified"></p>
         <p id="lastModifiedTime"></p>
     </footer>
+
     <script>
-    // Retrieve form data sent via GET
-    const urlParams = new URLSearchParams(window.location.search);
+        // Retrieve form data sent via GET
+        const urlParams = new URLSearchParams(window.location.search);
 
-    const username = urlParams.get('username');
-    const email = urlParams.get('email');
-    const rating = urlParams.get('rating');
+        const username = urlParams.get('username');
+        const email = urlParams.get('email');
+        const rating = urlParams.get('rating');
 
-    // Display data in the corresponding HTML elements
-    document.getElementById('usernameDisplay').textContent = username ? username : 'No username provided';
-    document.getElementById('emailDisplay').textContent = email ? email : 'No email provided';
-    document.getElementById('ratingDisplay').textContent = rating ? rating : 'No rating provided';
-</script>
+        // Display data in the corresponding HTML elements
+        document.getElementById('usernameDisplay').textContent = username || 'No username provided';
+        document.getElementById('emailDisplay').textContent = email || 'No email provided';
+        document.getElementById('ratingDisplay').textContent = rating || 'No rating provided';
+    </script>
 
     <script src="week1/scripts/getDates.js"></script>
 
 </body>
-
 
 </html>

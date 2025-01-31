@@ -39,23 +39,23 @@
     <main>
         
         <form action="record.html" method="get">
-            <label for="username">Nom d'utilisateur (obligatoire) :</label>
+            <label for="username">Username (required) :</label>
             <input type="text" id="username" name="username" required>
 
-            <label for="password">Mot de passe (obligatoire, min. 8 caractères, alphanumérique) :</label>
+            <label for="password">Password (required, min. 8 characters, alphanumeric) :</label>
             <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}">
 
-            <label for="confirmPassword">Confirmer le mot de passe :</label>
+            <label for="confirmPassword">Confirm password :</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-            <label for="email">E-mail (doit être de type @byui.edu) :</label>
+            <label for="email">E-mail (must be @byui.edu) :</label>
             <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$">
 
-            <label for="rating">Évaluation (1 à 10) :</label>
+            <label for="rating">Rating (1 to 10) :</label>
             <input type="range" id="rating" name="rating" min="1" max="10" step="1">
             <span id="ratingValue">5</span>
 
-            <button type="submit">Soumettre</button>
+            <button type="submit">Submit</button>
         </form>
     </main>
 
