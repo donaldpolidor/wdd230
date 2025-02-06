@@ -1,0 +1,56 @@
+{
+    "families": [
+      {
+        "lastName": "Durand",
+        "moveInDate": "2023-06-15",
+        "numberOfMembers": 4,
+        "visitedByBishopric": true,
+        "members": [
+          {
+            "name": "Jean Durand",
+            "gender": "Male",
+            "birthDate": "1980-04-12"
+          },
+          {
+            "name": "Marie Durand",
+            "gender": "Female",
+            "birthDate": "1982-09-30"
+          },
+          {
+            "name": "Paul Durand",
+            "gender": "Male",
+            "birthDate": "2010-03-21"
+          },
+          {
+            "name": "Sophie Durand",
+            "gender": "Female",
+            "birthDate": "2015-07-10"
+          }
+        ]
+      },
+      {
+        "lastName": "Lemoine",
+        "moveInDate": "2022-11-05",
+        "numberOfMembers": 3,
+        "visitedByBishopric": false,
+        "members": [
+          {
+            "name": "Alex Lemoine",
+            "gender": "Male",
+            "birthDate": "1975-01-25"
+          },
+          {
+            "name": "Elisa Lemoine",
+            "gender": "Female",
+            "birthDate": "1978-06-14"
+          },
+          {
+            "name": "Lucas Lemoine",
+            "gender": "Male",
+            "birthDate": "2008-12-05"
+          }
+        ]
+      }
+    ]
+  }
+  
