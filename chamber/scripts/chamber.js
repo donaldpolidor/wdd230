@@ -54,55 +54,71 @@ document.addEventListener("DOMContentLoaded", () => {
 //directory
 document.addEventListener("DOMContentLoaded", () => {
     const businessList = document.querySelector("#business-list");
-
-    // Checking JSON loading
-    fetch("data/members.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Erreur : Unable to load data");
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Data loaded :", data);
-
-            if (data.members.length === 0) {
-                businessList.innerHTML = "<p>No companies found.</p>";
-                return;
-            }
-
-            data.members.forEach(member => {
-                const section = document.createElement("section");
-                section.classList.add("business-card");
-                section.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}" loading="lazy">
-                    <h3>${member.name}</h3>
-                    <p><strong>📍 Address :</strong> ${member.address}</p>
-                    <p><strong>📞 Phone :</strong> ${member.phone}</p>
-                    <a href="${member.website}" target="_blank">🌐 Visit our website</a>
-                    <p>${member.description}</p>
-                    <p class="membership ${member.membership_level.toLowerCase()}">${member.membership_level} Member</p>
-                `;
-                businessList.appendChild(section);
-            });
-        })
-        .catch(error => {
-            console.error("Loading error :", error);
-            businessList.innerHTML = "<p>⚠️ Impossible to make companies pay.</p>";
-        });
-
-    // Grid and list mode management
     const gridButton = document.querySelector("#grid");
     const listButton = document.querySelector("#list");
 
+    // Load data from members.json
+    fetch("data/members.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Fichier JSON introuvable");
+            return response.json();
+        })
+        .then(data => displayMembers(data.members))
+        .catch(error => console.error("Erreur lors du chargement des entreprises :", error));
+
+    function displayMembers(members) {
+        businessList.innerHTML = ""; 
+
+        members.forEach(member => {
+            let card = document.createElement("section");
+            card.classList.add("business-card");
+
+            let img = document.createElement("img");
+            img.src = `images/${member.image}`;
+            img.alt = `Logo de ${member.name}`;
+            img.loading = "lazy";
+
+            let name = document.createElement("h3");
+            name.textContent = member.name;
+
+            let address = document.createElement("p");
+            address.textContent = `📍 ${member.address}`;
+
+            let phone = document.createElement("p");
+            phone.textContent = `📞 ${member.phone}`;
+
+            let website = document.createElement("a");
+            website.href = member.website;
+            website.textContent = "🔗 Visit Website";
+            website.target = "_blank";
+
+            let description = document.createElement("p");
+            description.textContent = member.description;
+
+            let membership = document.createElement("p");
+            membership.textContent = `🏅 Membership Level: ${member.membership_level}`;
+
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(address);
+            card.appendChild(phone);
+            card.appendChild(website);
+            card.appendChild(description);
+            card.appendChild(membership);
+
+            businessList.appendChild(card);
+        });
+    }
+
+    // Toggle between Grid and List views
     gridButton.addEventListener("click", () => {
-        businessList.classList.add("grid");
         businessList.classList.remove("list");
+        businessList.classList.add("grid");
     });
 
     listButton.addEventListener("click", () => {
-        businessList.classList.add("list");
         businessList.classList.remove("grid");
+        businessList.classList.add("list");
     });
 });
 
