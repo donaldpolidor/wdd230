@@ -147,6 +147,38 @@ button:focus {
     text-align: center;
 }
 
+.card2 {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem auto; /* Centre horizontalement */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.30);
+    transition: background-color 0.3s, color 0.3s;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement les enfants */
+    text-align: center; /* Centre le texte */
+}
+
+
+.card2 h2 {
+    margin-top: 2px;
+    background-color: #a30000;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+    width: 100%; /* Assure que le titre prend toute la largeur */
+}
+
+.title-card2 {
+    color: #333;
+    margin-top: 2px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     text-align: center;
