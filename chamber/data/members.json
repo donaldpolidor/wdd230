@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Access Haiti",
+        "address": "60 Geffrard, Pétion-Ville, Haiti",
+        "phone": "+509 28 12 6000",
+        "website": "https://accesshaiti.com/allaccess/",
+        "image": "acess.png",
+        "description": "it's an internet provider company",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Rhum Barbancourt",
+        "address": "16, Route Nationale #1, Damien Plaine du Cul-de-Sac Port-au-Prince, Haiti",
+        "phone": "+(509) 2816-3090 / 2811-8080",
+        "website": "https://www.barbancourt.com/",
+        "image": "barbancourt.png",
+        "description": "This company produces rum from sugar cane.",
+        "membership_level": "Platinum"
+      },
+      {
+        "name": "Brana",
+        "address": "Blvd Toussaint Louverture, Port-au-Prince, Haiti",
+        "phone": "+(509) 28 14 7777",
+        "website": "https://brana.ht/",
+        "image": "brana.png",
+        "description": "It's a brewery.",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Delimart",
+        "address": "148 Ave Jean-Paul II, Port-au-Prince, Haiti",
+        "phone": "+(509) 28 11 1098",
+        "website": "https://groupeboulos.ht/delimart/",
+        "image": "delimart.png",
+        "description": "Supermarket.",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Prestige",
+        "address": "Blvd Toussaint Louverture, Port-au-Prince, Haiti",
+        "phone": "+(509) 28 14 7777",
+        "website": "https://brana.ht/",
+        "image": "prestige-1.png",
+        "description": "An alcoholic beverage (beer).",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Valerio Canez",
+        "address": "Rte de Delmas, Port-au-Prince, Haiti",
+        "phone": "+(509) 29 47 3616",
+        "website": "https://valeriocanez.com/",
+        "image": "vc.webp",
+        "description": "It's a company that sells household and other goods.",
+        "membership_level": "Platinum"
+      },
+      {
+        "name": "Paryaj Lakay",
+        "address": "HP7G+54Q, Av. Maïs Gaté, Port-au-Prince 2005",
+        "phone": "+(509) 29 98 4444",
+        "website": "https://paryajlakay.com/sports",
+        "image": "paryaj.webp",
+        "description": "It's a gambling company.",
+        "membership_level": "Gold"
+      }
+    ]
+  }
+  

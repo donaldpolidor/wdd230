@@ -49,3 +49,62 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("timestamp").value = new Date().toISOString();
+
+
+//directory
+document.addEventListener("DOMContentLoaded", () => {
+    const businessList = document.querySelector("#business-list");
+
+    // Checking JSON loading
+    fetch("data/members.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erreur : Unable to load data");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Data loaded :", data);
+
+            if (data.members.length === 0) {
+                businessList.innerHTML = "<p>No companies found.</p>";
+                return;
+            }
+
+            data.members.forEach(member => {
+                const section = document.createElement("section");
+                section.classList.add("business-card");
+                section.innerHTML = `
+                    <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+                    <h3>${member.name}</h3>
+                    <p><strong>📍 Address :</strong> ${member.address}</p>
+                    <p><strong>📞 Phone :</strong> ${member.phone}</p>
+                    <a href="${member.website}" target="_blank">🌐 Visit our website</a>
+                    <p>${member.description}</p>
+                    <p class="membership ${member.membership_level.toLowerCase()}">${member.membership_level} Member</p>
+                `;
+                businessList.appendChild(section);
+            });
+        })
+        .catch(error => {
+            console.error("Loading error :", error);
+            businessList.innerHTML = "<p>⚠️ Impossible to make companies pay.</p>";
+        });
+
+    // Grid and list mode management
+    const gridButton = document.querySelector("#grid");
+    const listButton = document.querySelector("#list");
+
+    gridButton.addEventListener("click", () => {
+        businessList.classList.add("grid");
+        businessList.classList.remove("list");
+    });
+
+    listButton.addEventListener("click", () => {
+        businessList.classList.add("list");
+        businessList.classList.remove("grid");
+    });
+});
+
+
+
