@@ -1,25 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Menu Hamburger
     const hamburger = document.querySelector(".hamburger");
-    const menu = document.querySelector(".nav-menu");
+    const menu = document.querySelector("nav ul");
+    const heroImage = document.querySelector("main img");
 
-    if (hamburger && menu) {
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("show");
-        });
-    }
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("show");
 
-    // Update year and last modification
-    const yearSpan = document.getElementById("year");
-    const lastModifiedSpan = document.getElementById("lastModified");
+        if (menu.classList.contains("show")) {
+            heroImage.style.marginTop = menu.offsetHeight + "px";
+        } else {
+            heroImage.style.marginTop = "1rem";
+        }
+    });
 
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-    
-    if (lastModifiedSpan) {
-        lastModifiedSpan.textContent = "Last Updated: " + document.lastModified;
-    }
+    // Dynamically update the year and last modified date
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
+});
 
     // Welcome message management based on last visit
     const welcomeMessage = document.getElementById("welcome-message");
@@ -114,4 +111,3 @@ document.addEventListener("DOMContentLoaded", () => {
              businessList.classList.remove("grid");
          });
      }
- });
