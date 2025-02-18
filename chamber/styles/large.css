@@ -64,8 +64,6 @@
     }
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .membership-container {
@@ -95,6 +93,7 @@
         padding: 15px;
     }
 }
+
 
 /*style for directory*/
 @media (max-width: 600px) {
