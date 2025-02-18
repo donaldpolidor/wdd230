@@ -98,6 +98,9 @@
 @media (max-width: 600px) {
     .list {
         display: block;
+        max-width: 100%; /* S'assure que tout reste dans l'écran */
+        padding: 0 10px; /* Ajoute un petit padding pour éviter le collage aux bords */
+        overflow-x: hidden; /* Empêche tout débordement horizontal */
     }
 
     .list .business-card {
@@ -107,7 +110,9 @@
         gap: 10px;
         padding: 10px;
         border-bottom: 1px solid #ddd;
-        max-width: 100%; /* Empêche le débordement */
+        width: 100%;
+        max-width: 100%; /* Assure que ça ne dépasse pas */
+        box-sizing: border-box; /* Inclut padding et bordures dans la largeur */
     }
 
     .list .business-card img {
@@ -118,24 +123,29 @@
     .list .business-card h3 {
         font-size: 1em;
         font-weight: bold;
+        margin: 0;
+        padding: 0;
     }
 
     .list .business-card div {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        max-width: 100%; /* Évite que le texte dépasse */
     }
 
     .list .business-card p,
     .list .business-card a {
         font-size: 0.85em;
         text-align: left;
-        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
     }
 
     .list .business-card a {
         color: #007BFF;
         text-decoration: none;
+        display: block; /* Assure que les liens longs ne cassent pas la mise en page */
     }
 }
-
