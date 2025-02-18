@@ -256,7 +256,7 @@ footer a {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 11px;
     cursor: pointer;
     margin-top: 15px;
 }
@@ -265,7 +265,7 @@ footer a {
     background: #0056b3;
 }
 
-/* Avantages pour les membres de la section */
+/* Benefits for section members */
 .membership-benefits {
     margin-top: 80px;
     flex: 1;
@@ -405,19 +405,23 @@ footer {
 
 .business-card h3 {
     font-size: 1.2em;
-    color: #333;
+    color: #222; 
 }
 
 .business-card p {
     font-size: 0.9em;
-    color: #666;
+    color: #333; 
 }
 
 .business-card a {
     display: block;
-    color: #007BFF;
+    color: #0056b3; 
     text-decoration: none;
     margin-top: 5px;
+}
+
+.business-card a:hover {
+    color: #003d82; 
 }
 
 .list .business-card {
@@ -432,4 +436,112 @@ footer {
     margin-right: 15px;
 }
 
-      
+
+
+/*weather*/
+#weather {
+    background: #d5e9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.forecast-day {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+}
+
+.forecast-day img {
+    max-width: 90px;
+}
+
+/*spotlight*/
+#spotlight-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.spotlight {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.spotlight img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.spotlight h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.spotlight p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.spotlight a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.spotlight a:hover {
+    background-color: #0056b3;
+}
+
+
+/* Banner Styling */
+.banner {
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+}
+
+.banner button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #721c24;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+

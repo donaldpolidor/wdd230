@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="images/Logomci.png">
@@ -7,7 +8,7 @@
     <title>Port-au-Prince Chamber of Commerce - Haiti - Site map</title>
     <meta name="description" content="Site map for the Chamber of Commerce of Port-au-Prince, Haiti.">
     <meta name="author" content="Donald Polidor">
-    
+
     <!-- OG meta tags -->
     <meta property="og:title" content="Port-au-Prince Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -17,7 +18,7 @@
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -26,88 +27,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <img src="images/Logomci.png" alt="Ministry of Commerce logo" width="150">
-    <h1>PORT-AU-PRINCE CHAMBER OF COMMERCE (HAITI)</h1>
-    <img src="images/Facebook.png" alt="Facebook logo" width="20">
-    <nav>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <img src="images/Logomci.png" alt="Ministry of Commerce logo" width="150">
+        <h1>PORT-AU-PRINCE CHAMBER OF COMMERCE (HAITI)</h1>
+        <img src="images/Facebook.png" alt="Facebook logo" width="20">
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <img src="images/hero.jpg" alt="Commerce overview" style="width: 100%;">
-    <section id="about">
-        <h2>About the Community</h2>
-        <p>Our community is a place where people gather, share, and grow together.</p>
-    </section>
+    <main>
+        <img src="images/hero.jpg" alt="Commerce overview" style="width: 100%;">
+        <section id="about">
+            <h2>About the Community</h2>
+            <p>The Haitian Chamber of Commerce is an organization dedicated to supporting and promoting local businesses
+                while contributing to the country's economic development. It serves as a platform for commercial
+                exchanges, encourages business partnerships and facilitates networking for Haitian entrepreneurs.
+                Through strategic initiatives, training and events, the Chamber of Commerce works to improve the
+                business environment, stimulate investment and foster the growth of the Haitian economy. It plays a key
+                role in strengthening the competitiveness of local businesses and creating new opportunities for the
+                Haitian community.</p>
+                <!-- Banner Section -->
+            <div id="welcome-banner" class="banner">
+            <p>Join us for the Chamber of Commerce Welcome Meeting on Wednesday at 7:00 PM. Don't miss it!</p>
+            <button id="close-banner">❌</button>
+            </div>
+        </section>
 
-    <section id="news">
-        <h2>Latest News</h2>
-        <article>
-            <h3>New Partnership Announced</h3>
-            <p>Our Chamber of Commerce has partnered with local businesses to boost the community's economic growth. Stay tuned for exciting developments!</p>
-            <a href="#">Read more</a>
-        </article>
-        <article>
-            <h3>Upcoming Networking Event</h3>
-            <p>Join us for a networking event aimed at connecting entrepreneurs with local leaders. Mark your calendars for February 15th.</p>
-            <a href="#">Read more</a>
-        </article>
-        <article>
-            <h3>Business Spotlight</h3>
-            <p>This month's business spotlight features a local company providing innovative solutions in technology and logistics.</p>
-            <a href="#">Read more</a>
-        </article>
-    </section>
+        <section id="news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>New Partnership Announced</h3>
+                <p>Our Chamber of Commerce has partnered with local businesses to stimulate economic growth in the
+                    community. A new partnership with telephone company NATCOM is already underway, and we're excited to
+                    see the opportunities it will create for local businesses and connectivity in our region. Stay tuned
+                    for exciting developments to come!</p>
+            </article>
+            <article>
+                <h3>Upcoming Networking Event</h3>
+                <p>Join us for a networking event aimed at connecting entrepreneurs with local leaders. Mark your
+                    calendars for March 15th, 2025.</p>
+            </article>
+        </section>
 
-    <section id="weather">
-        <h2>Weather</h2>
-        <p>Current temperature: 25°C, sunny.</p>
-        <p><a href="#">See the forecast</a></p>
-    </section>
+        <section id="business">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container"></div>
+            <p>This month, the chamber is highlighting local companies offering innovative solutions in the fields of
+                technology and logistics, and which have only silver or gold levels of membership.</p>
+        </section>
 
-    <section id="cta">
-        <h2>Calls to Action</h2>
-        <a href="#" class="cta-button">Join the community</a>
-        <a href="#" class="cta-button">Participate in events</a>
-        <a href="#" class="cta-button">Download resources</a>
-    </section>
+        <section id="weather">
+            <h2>Weather In Port-au-Prince (Haiti)</h2>
+            <div id="current-weather">
+                <p>Current temperature : <span id="current-temp">--°C</span></p>
+                <p>Description : <span id="weather-desc">--</span></p>
+                <img id="weather-icon" src="" alt="" width="90">
+            </div>
+            <h3>Forecast for the next 3 days :</h3>
+            <div id="forecast"></div>
+        </section>
 
-    <section id="business">
-        <h2>Business Spotlights</h2>
-        <img src="images/acess.png" alt="Business Acess" width="60">
-        <img src="images/barbancourt.png" alt="Barbancourt" width="60">
-        <img src="images/brana.png" alt="Brana" width="60">
-        <img src="images/delimart.png" alt="Delimart" width="60">
-        <img src="images/pharmacy.png" alt="Pharmacy" width="60">
-        <img src="images/paryajlakay.png" alt="Paryaj Lakay" width="60">
-        <p>Highlight local businesses that make our community shine.</p>
-    </section>
-</main>
+        <section id="cta">
+            <h2>Calls to Action</h2>
+            <a href="join.html" class="cta-button">Join the community</a>
+            <!--<a href="#" class="cta-button">Participate in events</a> -->
+            <a href="document/resources.docx" class="cta-button" download>Download resources</a>
+        </section>
 
-<footer>
-    <p>CONTACT US</p>
-    <p>📞 +509 4428 7832 / 3210-3217</p>
-    <p>🗺 38 Bis, Pacot, Garoute Street.</p>
-    <p>📧 <a href="mailto:info@chamber.com">info@chamber.com</a></p>
-    <p>Follow us on <a href="#">social media</a>.</p>
-    <p>&copy; <span id="year"></span> 💻Donald Polidor💻 Haiti</p>
-    <p id="lastModified"></p>
-</footer>
+        <section id="business">
+            <h2>Business Spotlights</h2>
+            <img src="images/acess.png" alt="Business Acess" width="60">
+            <img src="images/barbancourt.png" alt="Barbancourt" width="60">
+            <img src="images/brana.png" alt="Brana" width="60">
+            <img src="images/delimart.png" alt="Delimart" width="60">
+            <img src="images/pharmacy.png" alt="Pharmacy" width="60">
+            <img src="images/paryajlakay.png" alt="Paryaj Lakay" width="60">
+            <p>Highlight local businesses that make our community shine.</p>
+        </section>
+    </main>
 
-<script src="scripts/chamber.js"></script>
+    <footer>
+        <p>CONTACT US</p>
+        <p>📞 +509 4428 7832 / 3210-3217</p>
+        <p>📧 <a href="mailto:info@chamber.com">infochamber@gmail.com</a></p>
+        <p>🗺 38 Bis, Pacot, Garoute Street.</p>
+        <p>Follow us on <a href="#">social media</a>.</p>
+        <p>&copy; <span id="year"></span> 💻Donald Polidor💻 Haiti</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/chamber.js"></script>
 </body>
+
 </html>
