@@ -95,7 +95,6 @@
 }
 
 
-/*style for directory*/
 @media (max-width: 600px) {
     .list {
         display: block;
@@ -103,11 +102,12 @@
 
     .list .business-card {
         display: grid;
-        grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 80px auto;
         align-items: center;
         gap: 10px;
         padding: 10px;
         border-bottom: 1px solid #ddd;
+        max-width: 100%; /* Empêche le débordement */
     }
 
     .list .business-card img {
@@ -120,10 +120,17 @@
         font-weight: bold;
     }
 
+    .list .business-card div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .list .business-card p,
     .list .business-card a {
         font-size: 0.85em;
         text-align: left;
+        word-wrap: break-word;
     }
 
     .list .business-card a {
@@ -131,3 +138,4 @@
         text-decoration: none;
     }
 }
+
