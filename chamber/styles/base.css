@@ -79,8 +79,6 @@ nav ul li a:hover {
     background-color: white;
 }
 
-
-
 main {
     flex: 1;
     padding: 1rem;
@@ -131,7 +129,6 @@ section {
 #news article a:hover {
     text-decoration: underline;
 }
-
 
 footer {
     background-color: #333;
