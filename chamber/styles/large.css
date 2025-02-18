@@ -53,6 +53,48 @@
     }
 }
 
+/*weather*/
+@media (max-width: 600px) {
+    #weather {
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 auto;
+        text-align: center; /* Centre tout le texte */
+    }
+
+    #current-weather {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centre le contenu */
+        justify-content: center;
+        gap: 10px;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #weather-icon {
+        display: block;
+        margin: 0 auto; /* Centre l’image */
+        max-width: 100px; /* Empêche un affichage trop grand */
+        height: auto;
+    }
+
+    #forecast {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #forecast div {
+        max-width: 90%;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+}
+
+
 /* Specific CSS for Discovery layout */
 @media (max-width: 768px) {
     .grid-container {
