@@ -59,13 +59,14 @@
         max-width: 100%;
         padding: 15px;
         margin: 0 auto;
-        text-align: center; /* Centre tout le texte */
+        text-align: center; 
+        font-size: 12px;
     }
 
     #current-weather {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centre le contenu */
+        align-items: center; 
         justify-content: center;
         gap: 10px;
         max-width: 100%;
@@ -74,8 +75,8 @@
 
     #weather-icon {
         display: block;
-        margin: 0 auto; /* Centre l’image */
-        max-width: 100px; /* Empêche un affichage trop grand */
+        margin: 0 auto; 
+        max-width: 100px; 
         height: auto;
     }
 
@@ -88,7 +89,7 @@
     }
 
     #forecast div {
-        max-width: 90%;
+        max-width: 100%;
         padding: 10px;
         border: 1px solid #ddd;
     }
