@@ -64,6 +64,7 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -126,6 +127,7 @@ section {
     text-decoration: none;
 }
 
+
 #news article a:hover {
     text-decoration: underline;
 }
@@ -155,11 +157,11 @@ footer a {
     text-align: center;
 }  
 
-        /* Specific CSS for Discovery layout */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
+/* Specific CSS for Discovery layout */
+.grid-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 1rem;
         }
 
         .sidebar, .gallery {
@@ -201,7 +203,6 @@ footer a {
         .gallery img:hover {
             transform: scale(1.05);
         }
-
 
 
 /* Main layout */
