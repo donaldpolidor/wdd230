@@ -54,19 +54,20 @@
 }
 
 /*weather*/
+/* Weather */
 @media (max-width: 600px) {
     #weather {
         max-width: 100%;
         padding: 15px;
         margin: 0 auto;
         text-align: center; 
-        font-size: 12px;
+        font-size: 13px;
     }
 
     #current-weather {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
         gap: 10px;
         max-width: 100%;
@@ -75,8 +76,8 @@
 
     #weather-icon {
         display: block;
-        margin: 0 auto; 
-        max-width: 100px; 
+        margin: 0 auto;
+        max-width: 100px;
         height: auto;
     }
 
@@ -84,16 +85,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 15px; 
         text-align: center;
     }
 
     #forecast div {
-        max-width: 100%;
-        padding: 10px;
+        width: 90%; 
+        max-width: 400px; 
+        padding: 15px;
         border: 1px solid #ddd;
+        border-radius: 8px; 
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
 }
+
 
 
 /* Specific CSS for Discovery layout */
